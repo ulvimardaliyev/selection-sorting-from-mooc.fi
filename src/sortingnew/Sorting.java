@@ -17,19 +17,22 @@ public class Sorting {
         //we need an int in order to 
         //determine how many times we want to find the smallest number
         int times = 0;
+        //and we should use while loop to find the smallest number and change
+        //the numbers from the smallest to the biggest one
+        //via invoking the static method "smallest"
         while (times < array.length) {
             smallest(array, times);
             times++;
             System.out.println(Arrays.toString(array));
         }
     }
-
+//we should change the number to the smallest one
     public static void small(int[] array, int index1, int index2) {
         int firstIndexNumber = array[index1], secondIndexNumber = array[index2];
         array[index1] = secondIndexNumber;
         array[index2] = firstIndexNumber;
     }
-
+//we find the smallest index
     public static void smallest(int[] array, int index) {
         int i = index, j = index, enBalacaIndex;
         while (i < array.length) {
