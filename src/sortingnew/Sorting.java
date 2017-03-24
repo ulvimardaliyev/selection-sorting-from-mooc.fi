@@ -1,20 +1,25 @@
 package sortingnew;
-
+//we have to import this java util in order to print array's elements
 import java.util.Arrays;
 
 public class Sorting {
 
     public static void main(String[] args) {
+        //initialize an array
         int[] values = {8, 3, 7, 9, 1, 2, 4, 11, 10,111,1,-1, 74,78787, 888888888};
+        //sorting and printing array
         sort(values);
     }
-
+//creating new static method to help to create solution algorithm
     public static void sort(int[] array) {
+        //first, we can see all elements of array and print them
         System.out.println(Arrays.toString(array));
-        int length = 0;
-        while (length < array.length) {
-            smallest(array, length);
-            length++;
+        //we need an int in order to 
+        //determine how many times we want to find the smallest number
+        int times = 0;
+        while (times < array.length) {
+            smallest(array, times);
+            times++;
             System.out.println(Arrays.toString(array));
         }
     }
